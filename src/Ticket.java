@@ -2,13 +2,15 @@
 public class Ticket {
 	
 	private String title;
+	private String type;
 	private int price; 
 	private int row;
 	private int sit;
 	private int roomNumber;
 	
-	public Ticket(String title, int price, int row, int sit, int roomNumber) {
+	public Ticket(String title, String type, int price, int row, int sit, int roomNumber) {
 		this.title = title;
+		this.type = type;
 		this.price = price;
 		this.row = row;
 		this.sit = sit;
@@ -17,6 +19,10 @@ public class Ticket {
 
 	public String getTitle() {
 		return title;
+	}
+	
+	public String getType() {
+		return type;
 	}
 
 	public int getPrice() {
@@ -37,6 +43,10 @@ public class Ticket {
 
 	public void setTitle(String title) {
 		this.title = title;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public void setPrice(int price) {

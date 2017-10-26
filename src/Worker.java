@@ -1,15 +1,69 @@
 
-public interface Worker { // zrobiæ tablice z pracownikami?
+public class Worker {  // zrobiæ tablice z pracownikami?
 	
-////////////// interfejs to kontrakt, który mówi co klasa implementuj¹ca mo¿e robiæ, ale nie jak ma to robiæ./////////////////
+	private String Name;
+	private String Surname;
+	private int age;
+	private String sex;
+	private String profession;
+	private int salary;
+	
+	public Worker(String Name, String Surname, int age, String sex, String profession, int salary) {
+		this.Name = Name;
+		this.Surname = Surname;
+		this.age = age;
+		this.sex = sex;
+		this.profession = profession;
+		this.salary = salary;
+	}
 
-	// pracuj
-	
-	// wez urlop
-	
-	// idz na przerwe
-	
-	
-	//imie, nazwisko, wiek, plec, pesel, zarobki, dyspozycja
+	public String getName() {
+		return Name;
+	}
 
+	public String getSurname() {
+		return Surname;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public String getProfession() {
+		return profession;
+	}
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public void setSurname(String surname) {
+		Surname = surname;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	public void setProfession(String profession) {
+		this.profession = profession;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
 }
+
+
