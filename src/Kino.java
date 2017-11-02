@@ -1,11 +1,18 @@
 public class Kino {
 	
-	
+	public Kino() {
+		new Window(512, 512, "staff"); //EDIT THE NAME.
+		
+	}
 	
 	
 	public static void main(String args[]) throws Exception {
+		new Kino(); // straight to constructor.
+		
+		
+		
 		//////// SQL connectivity  ///////////// 
-		//DB_service dbService = new DB_service();
+		// DB_service dbService = new DB_service();
 		// dbService.createTable();
 		// dbService.get();
 		

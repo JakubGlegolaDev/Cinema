@@ -1,12 +1,12 @@
 
 public class Ticket {
 	
-	private String title;
-	private String type;
-	private int price; 
-	private int row;
-	private int sit;
-	private int roomNumber;
+	private String title; // from  DB
+	private String type;  // from DB
+	private int price;    // from DB	
+	private int row;	  // PODAJE U¯YTK	U¯YTKOWNIK POWINIEN WYBRAÆ TYTU£ A DOPIERO POBIERZE TO Z DB HMMM
+	private int sit;	  // PODAJE U¯	
+	private int roomNumber; // FROM DB?? czy narazie zostawiæ?
 	
 	public Ticket(String title, String type, int price, int row, int sit, int roomNumber) {
 		this.title = title;
