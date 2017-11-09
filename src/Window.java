@@ -1,6 +1,7 @@
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -11,6 +12,8 @@ public class Window extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	JButton testButton, testButton1; 
 	JLabel testLabel;
+	
+	DB_service db = new DB_service();
 
 	public Window(int width, int heigh, String title) {
 		/////////////////////////////////////////////////
@@ -36,19 +39,24 @@ public class Window extends JFrame implements ActionListener {
 		testButton1.setBounds(300, 300, 190, 25);
 		testButton1.addActionListener(this);
 		frame.add(testButton1);
+		
+		// TEST LABEL FOR SHOWING MYSQL QUERIES
+		testLabel = new JLabel("here");
+		testLabel.setBounds(20, 20, 190, 25);
+		frame.add(testLabel);
 	}
-
+		
+	
+	
+	
+	
 	public void actionPerformed(ActionEvent e) {
-		Object buttonSource = e.getSource();
+		
+		Object buttonSource = e.getSource(); // przechowuje decyzje podjêt¹ w listenerze - czyli który button kliknelismy
+		
 		if(buttonSource == testButton) {
-			DB_service s = new DB_service();
-			try {
-				s.get();
-			} catch (Exception e1) {
-				e1.printStackTrace();
-			}
+			testLabel.setText(db.array);
 		} else if (buttonSource == testButton1) {
-			System.out.println("siemka");
 		}
 	}
 	

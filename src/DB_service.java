@@ -38,31 +38,21 @@ public class DB_service {
 			
 			ArrayList<String> array = new ArrayList<String>();
 			while(result.next()) {
-				//System.out.print(result.getString("tytul"));
-				//System.out.print("| ");
-				//System.out.print(result.getString("gatunek"));
-				//System.out.print("| ");
-				//System.out.print(result.getString("rezyser"));
-				//System.out.print("| ");
-				//System.out.print(result.getString("ograniczenie_wieku"));
-				//System.out.print("| ");
-				//System.out.print(result.getString("godziny"));
-				//System.out.print("| ");
-				//System.out.print(result.getString("kino"));
-				//System.out.print("| ");
-				//System.out.print(result.getString("ulgowy"));
-				//System.out.print("| ");
-				//System.out.print(result.getString("normalny"));
-				//System.out.println(" ");
-				array.add(result.getString("tytul"));
-				array.add(result.getString("gatunek"));
-				array.add(result.getString("rezyser"));
-				array.add(result.getString("ograniczenie_wieku"));
-				array.add(result.getString("godziny"));
-				array.add(result.getString("kino"));
-				array.add(result.getString("ulgowy"));
-				array.add(result.getString("normalny"));
+				System.out.print(result.getString("tytul"));
+				System.out.print("| ");
+				System.out.print(result.getString("gatunek"));
+				System.out.print("| ");
+				System.out.print(result.getString("rezyser"));
+				System.out.print("| ");
+				System.out.print(result.getString("ograniczenie_wieku"));
+				System.out.print("| ");
+				System.out.print(result.getString("godziny"));
+				System.out.print("| ");
+				System.out.print(result.getString("kino"));
+				System.out.println(" ");
+				
 			}
+			System.out.println("records added!");
 			return array;
 		}catch(Exception e){
 			System.out.println(e);
